@@ -21,8 +21,7 @@ app.get('/', (req, res) => {
 // Set 404 Error page
 app.get('*',(req, res, next) => {
     res.status(404).render('404');
-    res.end();
-})
+});
 
 app.listen(process.env.PORT || port, () => {
     console.log(`Server booming at http://localhost:${port}`);
