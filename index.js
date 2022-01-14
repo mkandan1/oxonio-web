@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 
 // Set 404 Error page
-app.use((req, res, next) => {
+app.get('*',(req, res, next) => {
     res.status(404).render('404');
     res.end();
 })
